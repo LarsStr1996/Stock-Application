@@ -50,15 +50,15 @@ class plots(object):
                      live_stock_total.append(live_stock)
                      stock_difference = live_stock_total[i]-live_stock_total[i-1]
                      ix.append(i)
-                     ax1.clear()
+                     #ax1.clear()
                      if live_stock_total[i] - live_stock_total[i-1] > 0.0:
                             color.append('green')
-                            ax1.bar(time_x,live_stock_total,color='green')
+                            ax1.plot(time_x,live_stock_total,color='green')
                      elif live_stock_total[i] - live_stock_total[i-1] < 0.0:
-                            ax1.bar(time_x,live_stock_total,color='red')
+                            ax1.plot(time_x,live_stock_total,color='red')
                             color.append('red')
                      else:
-                            ax1.bar(time_x,live_stock_total,color='black')
+                            ax1.plot(time_x,live_stock_total,color='black')
                             color.append('black')
                      print(color)
                      if i > 50:
@@ -146,7 +146,7 @@ class test(object):
               name='RDSA.AS'
               plots.wallet_plot(name)
               
-test_live_plots = True
+test_live_plots = False
 test_historical_stock = False
 test_wallet = False       
 if test_live_plots == True:

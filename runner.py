@@ -64,8 +64,9 @@ class Screens(object):
               global end_date
               global interval
               global company_name
+              
               company_name = StringVar()
-              company_name_entry = Entry(self.screen8,textvariable = self.company_name)
+              company_name_entry = Entry(self.screen8,textvariable = company_name)
               company_name_entry.pack()
               start_date = StringVar()
               end_date = StringVar()

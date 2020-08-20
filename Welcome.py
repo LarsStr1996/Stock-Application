@@ -64,8 +64,8 @@ class Welcome(object):
               username_entry.delete(0, END)
               password_entry.delete(0, END)
 
-              Label(screen1,text="",bg = 'dimgray').pack()
-              Label(screen1,bg = 'dimgray', text = "Registration Succesful",height="1",fg = "white",font=("calibri",11)).pack()
+              Label(self.screen,text="",bg = 'dimgray').pack()
+              Label(self.screen,bg = 'dimgray', text = "Registration Succesful",height="1",fg = "white",font=("calibri",11)).pack()
 
        def login_verify():
               username1 = username_verify.get()
@@ -105,7 +105,7 @@ class Welcome(object):
               Label(self.screen1,text="Password * ",bg = 'dimgray',width="300",fg='white').pack()
               password_entry = Entry(self.screen1,textvariable = password)
               password_entry.pack()
-              Label(screen1,text="",bg = 'dimgray').pack()
+              Label(self.screen1,text="",bg = 'dimgray').pack()
               Button(self.screen1, text="Register",width = 10,height = 1,command = Welcome().register_user).pack()              
         
        def login(self):
